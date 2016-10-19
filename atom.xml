@@ -309,6 +309,17 @@ end&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Concluding remarks&lt;/h2&gt;
 &lt;p&gt;Semi-hosting is another alternative to other IO methods that does not require any hardware except the likely already present debugging port. It is quite slow in comparison though and completely halts execution, so it is not suitable for high-volume or production logging. Another drawback is that if the breakpoints are not handled, execution will simply stay paused. It can, however, be invaluable when debugging the IO facilities themselves.&lt;/p&gt;
 &lt;p&gt;This article showed how one of the original semi-hosting functions defined by the ARM compiler collection can be implemented, but there is no hard rule declaring these the only possible conventions. When not going for compatibility with other systems, creating smaller and safer alternatives with restricted functionality may be a viable option as well.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;p&gt;(Updated on Oct 19th, 2016):&lt;/p&gt;
+&lt;h2&gt;Bonus: OpenOCD&lt;/h2&gt;
+&lt;p&gt;Pointed out by &lt;a href=&quot;https://www.reddit.com/user/ctz99&quot;&gt;ctz99&lt;/a&gt;, &lt;a href=&quot;http://openocd.org/&quot;&gt;OpenOCD&lt;/a&gt; supports arm semi-hosting as well, which saves the trouble of having to implement the Python scripts for gdb. Activation is easy from within gdb, when debugging through OpenOCD:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(gdb) monitor arm semihosting enable
+semihosting is enabled
+(gdb) continue
+Continuing.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that gdb will then no longer receive SIGTRAPs caused by semi-hosting calls; OpenOCD will handle them itself. As a consequence, all output will be displayed by OpenOCD instead as well.&lt;/p&gt;
 </content>
   </entry>
   <entry xml:base="http://embed.rs/atom.xml">
