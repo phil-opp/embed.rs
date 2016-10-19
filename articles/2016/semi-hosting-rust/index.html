@@ -51,7 +51,7 @@
 <li>The target's CPU is unhalted by the debugger and <strong>execution continues</strong>.</li>
 </ol>
 <h2>On ARM Cortex-M</h2>
-<p>The exact process is instruction set specific, for a Cortex-M in Thumb mode uses a <code>bkpt</code> instruction, while other ARM instruction sets uses an <code>svc</code> (<em>supervisor command</em>) or other instructions. Additionally, instead of using any of the commercial debugging software solutions, <a href="https://en.wikipedia.org/wiki/GNU_Debugger">gdb</a> will be used as the debugger. We can now implement the process step-by-step:</p>
+<p>The exact process is instruction set specific, for a Cortex-M in Thumb mode uses a <code>bkpt</code> instruction while other ARM instruction sets use an <code>svc</code> (<em>supervisor command</em>) or another instruction. Additionally, instead of using any of the commercial debugging software solutions, <a href="https://en.wikipedia.org/wiki/GNU_Debugger">gdb</a> will be used as the debugger. We can now implement the process step-by-step:</p>
 <h3>Halting the CPU</h3>
 <p>A simple <code>bkpt 0xAB</code> inline assembly instruction is enough to halt the CPU (see the <a href="http://embed.rs/articles/2016/arm-inline-assembly-rust">inline assembly introduction</a> for help on the <code>asm!</code>-macro):</p>
 <div class="highlight"><pre><span></span><span class="n">asm</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;bkpt 0xAB&quot;</span><span class="p">);</span><span class="w"></span>
