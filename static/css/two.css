@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* fonts */
+@import 'https://fonts.googleapis.com/css?family=Arvo:700|Scope+One|Source+Code+Pro:400,700';
+
+/* colors:
+
+bg primary: #090451;
+brand primary: #ec6b1d;
+
+*/
+
+pre {
+  font-family: Source Code Pro, monospace;
+  white-space: pre-wrap;
+  margin-bottom: 18px;
+}
+
+
+code {
+  font-family: Source Code Pro, monospace;
+  font-weight: 400;
+}
+
+code, pre {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+em {
+  font-weight: 300;
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6, .headline-font {
+  font-family: Open Sans, sans-serif;
+  font-weight: 700;
+  line-height: 1.25em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3, h4, h5, h6 {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: underline;
+  color: #090451;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ec6b1d;
+}
+
+a:active {
+  color: #ec6b1d;
+}
+
+body, div {
+  font-family: Lato, serif;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.logo {
+  font-family: Arvo;
+  font-size: 2.66em;
+  text-align: center;
+  font-weight: 700;
+}
+
+.accent {
+  color: #ec6b1d;
+}
+
+.article .info {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.article-item .info {
+  font-size: 0.8em;
+  margin-top: 1em;
+  margin-bottom: -0.5em;
+}
+
+p, ul, ol {
+  margin-bottom: 18px;
+}
+
+p.teaser {
+  font-style: italic;
+}
+
+.article ul li {
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+.article ol li {
+  list-style-type: decimal;
+  margin-left: 2em;
+}
+
+.read-article {
+  font-weight: 700;
+  margin-left: 1em;
+  margin-top: 0em;
+}
+
+/* navbar styles */
+.navbar {
+  background-color: #090451;
+  color: white;
+}
+
+.navbar a, .navbar a:active, .navbar a:visited {
+  color: white;
+}
+
+.navbar .gitlink {
+  text-align: center;
+}
+
+.navbar .gitlink img {
+  width: 36px;
+  height: 36px;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+}
+
+.feed-link {
+  margin-left: 0.5em;
+}
+
+.author-short-bio {
+  color: #666;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+@media screen and (max-device-width: 768px) {
+  img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .navbar {
+    padding: 18px 0px 9px 0px;
+  }
+
+  .navbar .logo {
+    margin-left: 18px;
+  }
+
+  .navbar .slogan {
+    display: none;
+  }
+
+  .article, .page {
+    margin: 18px;
+  }
+
+  .navbar {
+    display: block;
+  }
+
+  .navbar ul {
+    margin-top: 3px;
+    margin-bottom: 9px;
+    margin-left: 18px;
+  }
+
+  .navbar ul li {
+    display: inline;
+    margin-left: 15px;
+  }
+
+  .navbar .gitlink {
+    position: absolute;
+    top: 24px;
+    right: 0px;
+  }
+
+  .navbar .gitlink img {
+    margin: 0px 10px 0px 0px;
+    border: none;
+  }
+
+  .navbar .gitlink  {
+    text-align: right;
+    display: block;
+    flex-grow: 2;
+  }
+
+  .navbar .gitlink a {
+    text-decration: none;
+  }
+
+  .feed-link {
+    display: none;
+  }
+}
+
+@media screen and (min-device-width: 769px) {
+  body, div {
+    font-size: 18px;
+  }
+
+  .article, .page {
+    margin-left: 72px;
+    max-width: 628px;
+  }
+
+  .navbar {
+    width: 260px;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .navbar ul.menu {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 18px;
+  }
+
+  .navbar > div {
+    margin: 10px;
+  }
+
+  .navbar .gitlink img {
+    margin-bottom: 18px;
+    margin-top: 18px;
+  }
+
+  .main {
+    margin-left: 260px;
+    padding-top: 36px;
+    padding-bottom: 72px;
+  }
+}
